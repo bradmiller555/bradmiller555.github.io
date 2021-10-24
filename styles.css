@@ -69,6 +69,8 @@ body{
 
 #about img{
   width: 100%;
+  margin-top: 5px;
+  border-radius: 20px;
 }
 
 .container{
@@ -76,19 +78,33 @@ body{
   margin:0 auto;
 }
 
-.post{
-  max-width: 800px;
+.subject{
+  max-width: 900px;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 20px 0;
 }
 
-.post-container{
+.subject-container{
   padding-left: 20px;
 }
 
-.post-container:nth-child(odd){
+.subject-container:nth-child(odd){
   background-color: #f2f2f2;
 } 
+
+.subject-content a{
+  font-size: 12px;
+  display: inline-block;
+  background-color: #3f86e2;
+  padding: 5px 10px;
+  color: white;
+  margin: 5px 2px;
+  border-radius: 10px; 
+}
+
+.subject-content a:hover{
+  color: #222;
+}
 
 h1, h2, h3, h4{
   color: #333;
@@ -109,13 +125,4 @@ p{
   letter-spacing: 0.1em;
   text-align: center;
   font-size: 10px;
-}
-
-a{
-  color: #1abc9c;
-  text-decoration: none;
-}
-
-a:hover{
-  color: #F6A623;
 }
