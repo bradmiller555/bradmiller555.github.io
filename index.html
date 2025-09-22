@@ -1,108 +1,238 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Bradley Miller's Portfolio</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-  </head>
-  <body>
-    <div id="header">
-      <div class="container">
-        <a id="header-title" href = "index.html">Bradley Miller</a>
-        <ul id="header-nav">
-          <li><a href="pdfs/Brad Miller Resume.pdf" target="_blank">Resume</a></li>
-          <li><a href="https://www.linkedin.com/in/bradmiller555" target="_blank">LinkedIn</a></li>
-          <li><a href="mailto:brmiller@ctemc.org">Contact</a></li>
-        </ul>
-      </div>
-    </div>
+</head>
+<body>
     <div class="container">
-      <div id="about">
-        <div id="profile">
-          <img src="images/profile.png">
+        <header>
+            <div class="profile-image">
+                <img src="images/Headshot.jpg" alt="Profile Picture" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="profile-image-placeholder" style="display: none;">👨‍💻</div>
+            </div>
+            <h1>Bradley Miller</h1>
+            <p class="subtitle">Electrical Engineer</p>
+        </header>
+
+        <div id="home" class="page active">
+            <div class="projects-grid">
+                <div class="project-tile" style="background-image: url('images/KK_PCB_Assembly.jpeg')" onclick="showProject('project1')">
+                    <div class="project-overlay">
+                        <div class="project-title">KaleidoKickz (CNC Shoe Designer) - Electronics</div>
+                        <div class="project-description">From breadboarded design to PCB for a 3-axis CNC</div>
+                    </div>
+                </div>
+                
+                <div class="project-tile" style="background-image: url('images/DK_Screen_Mockup.png')" onclick="showProject('project2')">
+                    <div class="project-overlay">
+                        <div class="project-title">Donkey Kong - Nexys A7 Edition</div>
+                        <div class="project-description">Basic recreation of Donkey Kong using a Digilent Nexys A7 FPGA and a VGA monitor, written in Verilog</div>
+                    </div>
+                </div>
+                
+                <div class="project-tile" style="background-image: url('images/EG.jpeg')" onclick="showProject('project3')">
+                    <div class="project-overlay">
+                        <div class="project-title">Custom Electric Guitar</div>
+                        <div class="project-description">Handmade electric guitar with custom amplification and filtration circuitry</div>
+                    </div>
+                </div>
+                <div class="project-tile" style="background-image: url('images/ST_Showcase.jpg')" onclick="showProject('project4')">
+                    <div class="project-overlay">
+                        <div class="project-title">SmarTender (Robotic Bartender)</div>
+                        <div class="project-description"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h2>About Me</h2>
+                <p class="about-text">
+                    I am a senior pursuing a Bachelor's degree in Electrical and Computer Engineering and a Master's degree in Electrical Engineering at the University of Southern California. The projects in this portfolio were created as personal projects, collaborative efforts, and to demonstrate expertise in class.
+                </p>
+            </div>
         </div>
-        <div id="about-me">
-          <h1>About Me</h1>
-          <p>Hi, my name is Bradley Miller and I am a senior at High Technology High School in Lincroft, NJ. I am interested in robotics, carpentry, coding, and research. 
-            I am the Co-Founder and Chief Installation Specialist at Heliarc LLC.
-          </p>
+
+        <div id="project1" class="page">
+            <div class="project-page">
+                <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+                <h2>KaleidoKickz (CNC Shoe Designer) - Electronics</h2>
+                <p>Kaleido-Kickz is a CNC drawing machine used to customize Converse sneakers.
+                    The project contains a front-end for drawing a design, which is converted into G-code for controlling motor movement and moving the marker across the side of the shoe.
+                    I owned the complete electrical system design, including feature definition, schematic drawing, component selection, breadboarding, schematic capture, layout, PCB fabrication, assembly, and testing.
+                    The end product was my first fully custom PCB design, which fits within the footprint of a Raspberry Pi and delivers the necesary features for the CNC's control systems to function.
+                </p>
+                
+                <div class="project-images">
+                    <img src="images/KK_Schematic.png" class="project-image">
+                    <img src="images/KK_Breadboard.jpeg" class="project-image">
+                    <img src="images/KK_Kicad.png" class="project-image">
+                    <img src="images/KK_PCB.jpeg" class="project-image">
+                    <img src="images/KK_PCB_Assembly.jpeg" class="project-image">
+                </div>
+
+                <h3>Technologies Used</h3>
+                <p>KiCAD, Soldering, Troubleshooting Equipment (DMMs, Oscilloscopes)</p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Raspberry Pi HAT connection for easy attachment</li>
+                    <li>Support for up to 4 stepper motors</li>
+                    <li>Support for up to 4 digital I/O (limit switches)</li>
+                </ul>
+
+                <div class="project-links">
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div id="project2" class="page">
+            <div class="project-page">
+                <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+                <h2>Donkey Kong - Nexys A7 Edition</h2>
+                <p>Basic recreation of Donkey Kong using a Digilent Nexys A7 FPGA and a VGA monitor, written in Verilog.</p>
+                
+                <div class="project-images">
+                    <img src="images/DK_Block.png" class="project-image">
+                    <img src="images/DK_FSM.png" class="project-image">
+                    <img src="images/DK_FSM2.png" class="project-image">
+                    <img src="images/DK_FSM3.png" class="project-image">
+                    <img src="images/DK_Screen_Mockup.png" class="project-image">
+                </div>
+
+                <h3>Technologies Used</h3>
+                <p>Verilog, Vivado, Questasim, VGA</p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Verilog implementation of basic Donkey Kong game</li>
+                    <li>Tested on Digilent Nexys A7 FPGA boards</li>
+                    <li>Movement control for left/right and climbing/descending ladders</li>
+                    <li>Moving barrels that cause reset on player contact</li>
+                    <li>Game menu for starting/pausing gameplay</li>
+                </ul>
+
+                <div class="project-links">
+                    <a href="pdfs/EE354_DK_Pres.pdf" class="project-link">Slide Deck</a>
+                    <a href="pdfs/EE 354 Final Project Report.pdf" class="project-link">Report</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="project3" class="page">
+            <div class="project-page">
+                <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+                <h2>Custom Electric Guitar</h2>
+                <p>Designed, simulated, prototyped, and tested analog circuitry for an electric guitar's amplifier.
+                    Built a simple electric guitar with a cigar box, a wooden neck, 6 strings, and magnetic pickups.
+                    Connected pickups to amplifier circuit and outputted signal to 5 ohm speaker.
+                </p>
+                
+                <div class="project-images">
+                    <img src="images/EG_Schematic.png" class="project-image">
+                    <img src="images/EG_Circuit.jpeg" class="project-image">
+                    <img src="images/EG.jpeg" class="project-image">
+                </div>
+
+                <h3>Technologies Used</h3>
+                <p>LTSpice, Op-Amps, Troubleshooting Equipement (DMMs, Oscilloscopes)</p>
+
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Guitar string signal amplification and filtering for direct speaker output</li>
+                    <li>2 amplifying stages for a total of 20x voltage gain</li>
+                    <li>Passive band-pass filter implementation</li>
+                </ul>
+
+                <div class="project-links">
+                    <a href="pdfs/EE202 Project.pdf" class="project-link">Report</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="project4" class="page">
+            <div class="project-page">
+                <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+                <h2>SmarTender (Robotic Bartender)</h2>
+                <p>
+The SmarTender is a robotic bartender that combines simple, high reliability symptoms with a versatile, flashy implementation. The frame is made from 2020 aluminum extrusions, allowing flexibility of drink dispensers and linear rails. A motor driven belt system moves the cup along the frame, and drinks are dispensed into the cup via a lifting mechanism, pushing on a nozzle attached to the drink and allowing controlled release. The final product contained 2D motion, a website with Bluetooth connection for placing drink orders, a solids module, and 7 drink routines.</p>
+                
+                <div class="project-images">
+                    <img src="images/ST_Showcase.jpg" class="project-image">
+                    <img src="images/ST_Fall_Design.jpeg" class="project-image">
+                </div>
+
+                <h3>Technologies Used</h3>
+                <p>Arduino, TinkerCAD Circuits, Troubleshooting Equipement (DMMs, Oscilloscopes), Fusion 360, 3D Printing</p>
+
+                <h3>Features</h3>
+                <ul>
+                    <li>Automated ice and drink dispensing</li>
+                    <li>8 dispensers for drink attachments</li>
+                    <li>Tested to support generic 12oz plastic cups</li>
+                    <li>Website with Bluetooth capabilities for ordering drinks</li>
+                </ul>
+
+                <div class="project-links">
+                    <a href="pdfs/ST_Showcase_Slides.pdf" class="project-link">Slide Deck</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="content">
-      <div class="subject-container">
-        <div class="subject">
-          <h3 class="subject-title">Engineering Projects</h3>
-          <div class="subject-content">
-            <p>VEX Robotics Tipping Point Robots (Team)</p>
-              <img src="images/TP1.JPG">
-              <img src="images/TP2.JPG">
-            <p>Educational Asthma Animatronic (Team)
-              <br>
-              <img src="images/Anima1.jpeg">
-              <img src="images/Anima2.png">
-              <img src="images/Anima3.jpeg">
-              <img src="images/Anima4.jpeg">
-              <br>
-              <a href="https://youtu.be/BkcrCdpJqvw" target="_blank">View Video Demonstration</a>
-            </p>
-            <p>VEX Robotics Change Up Robots (Team)
-              <br>
-              <img src="images/CU front.png">
-              <img src="images/CU left.png">
-              <img src="images/CU back.png">
-              <img src="images/CU right.png">
-              <img src="images/CU iso.png">
-            </p>
-            <p>The Musical Comedy Murders of the 1940s Set and Props (Team)</p>
-              <br>
-              <img src="">
-              <img src="">
-              <img src="">
-              <img src="">
-            <p>Woodward Digital Media Camp Video</p>
-              <a href="https://youtu.be/yyL21WJDvz0" targe="_blank">View Video</a>
-            <p>Wooden Stage</p>
-              <br>
-              <img src="">
-              <img src="">
-              <img src="">
-              <img src="">
-            <p>Wooden Skateboard Boxes/Ramp</p>
-              <br>
-              <img src="">
-              <img src="">
-              <img src="">
-              <img src="">
-            <p>Rumson Schools Mobile Application
-              <br>
-              <img src="images/RSD1.png">
-              <img src="images/RSD2.png">
-              <img src="images/RSD3.png">
-              <br>
-              <a href="https://github.com/bradmiller555/RumsonSchools" target="_blank">View Repository</a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="subject-container">
-       <div class="subject">
-          <h3 class="subject-title">Research</h3>
-          <div class="subject-content">
-            <p>
-              The Application of Melatonin to Stimulate Growth in Mung Beans
-              <br>
-              <a href="pdfs/abstract.pdf" target="_blank">View Abstract</a>
-              <a href="pdfs/research_full.pdf" target="_blank">View Full PDF</a>
-              <a href="https://youtu.be/z6ZxAT1xDuo" target="_blank">View Video Presentation</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="footer">
-      <div class="container">
-        <p>Designed and Programmed by Brad Miller in 2021</p>
-      </div>
-    </div>
-  </body>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Update nav button states
+            const navButtons = document.querySelectorAll('.nav-btn');
+            navButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            if (pageId === 'home') {
+                document.querySelector('.nav-btn').classList.add('active');
+            }
+            
+            // Smooth scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showProject(projectId) {
+            showPage(projectId);
+        }
+
+        // Add smooth hover effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectTiles = document.querySelectorAll('.project-tile');
+            
+            projectTiles.forEach(tile => {
+                tile.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                tile.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // Add parallax effect to background
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const parallax = document.body;
+                const speed = scrolled * 0.5;
+                parallax.style.backgroundPosition = `center ${speed}px`;
+            });
+        });
+    </script>
+</body>
 </html>
