@@ -42,15 +42,27 @@
                 <div class="project-tile" style="background-image: url('images/ST_Showcase.jpg')" onclick="showProject('project4')">
                     <div class="project-overlay">
                         <div class="project-title">SmarTender (Robotic Bartender)</div>
-                        <div class="project-description"></div>
+                        <div class="project-description">Automated drink creation</div>
                     </div>
                 </div>
+                <div class="project-tile" style="background-image: url('images/PAFT_Cad.png')" onclick="showProject('project5')">
+                    <div class="project-overlay">
+                        <div class="project-title">PAFT - Electronics</div>
+                        <div class="project-description">WIP - Tripedal walking robot based on TARS from Interstellar</div>
+                    </div>
+                </div>
+                <!-- <div class="project-tile" style="background-image: url('images/ST_Showcase.jpg')" onclick="showProject('project6')">
+                    <div class="project-overlay">
+                        <div class="project-title">16-bit MAC Circuit</div>
+                        <div class="project-description">Silicon VLSI layout for a multiply and accumulate operation</div>
+                    </div>
+                </div> -->
             </div>
 
             <div class="about-section">
                 <h2>About Me</h2>
                 <p class="about-text">
-                    I am a fourth year student pursuing a Bachelor's degree in Electrical and Computer Engineering and a Master's degree in Electrical Engineering at the University of Southern California, planning to graduate in May 2026. The projects in this portfolio were created as personal projects, collaborative efforts, and to demonstrate expertise in class.
+                    I am a fourth year student pursuing a Bachelor's degree in Electrical and Computer Engineering and a Master's degree in Electrical Engineering at the University of Southern California, planning to graduate in December 2026. The projects in this portfolio were created as personal projects, collaborative efforts, and to demonstrate expertise in class.
                 </p>
             </div>
         </div>
@@ -157,7 +169,7 @@
                 <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
                 <h2>SmarTender (Robotic Bartender)</h2>
                 <p>
-The SmarTender is a robotic bartender that combines simple, high reliability symptoms with a versatile, flashy implementation. The frame is made from 2020 aluminum extrusions, allowing flexibility of drink dispensers and linear rails. A motor driven belt system moves the cup along the frame, and drinks are dispensed into the cup via a lifting mechanism, pushing on a nozzle attached to the drink and allowing controlled release. The final product contained 2D motion, a website with Bluetooth connection for placing drink orders, a solids module, and 7 drink routines.</p>
+The SmarTender is a robotic bartender that combines simple, high reliability systems with a versatile, flashy implementation. The frame is made from 2020 aluminum extrusions, allowing flexibility of drink dispensers and linear rails. A motor driven belt system moves the cup along the frame, and drinks are dispensed into the cup via a lifting mechanism, pushing on a nozzle attached to the drink and allowing controlled release. The final product contained 2D motion, a website with Bluetooth connection for placing drink orders, a solids module, and 7 drink routines.</p>
                 
                 <div class="project-images">
                     <img src="images/ST_Showcase.jpg" class="project-image">
@@ -165,7 +177,7 @@ The SmarTender is a robotic bartender that combines simple, high reliability sym
                 </div>
 
                 <h3>Technologies Used</h3>
-                <p>Arduino, TinkerCAD Circuits, Troubleshooting Equipement (DMMs, Oscilloscopes), Fusion 360, 3D Printing</p>
+                <p>Arduino, TinkerCAD Circuits, Troubleshooting Equipment (DMMs, Oscilloscopes), Fusion 360, 3D Printing</p>
 
                 <h3>Features</h3>
                 <ul>
@@ -173,6 +185,36 @@ The SmarTender is a robotic bartender that combines simple, high reliability sym
                     <li>8 dispensers for drink attachments</li>
                     <li>Tested to support generic 12oz plastic cups</li>
                     <li>Website with Bluetooth capabilities for ordering drinks</li>
+                </ul>
+
+                <div class="project-links">
+                    <a href="pdfs/ST_Showcase_Slides.pdf" class="project-link">Slide Deck</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="project5" class="page">
+            <div class="project-page">
+                <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+                <h2>PAFT - Electronics</h2>
+                <p>
+                    PAFT is a scale replica of TARS from Interstellar, a tripedal robot made of rotating rectangular prisms. I designed, built, and tested the full electronic systems, which primarily consisted of selecting a battery, safely powering different peripherals using the battery, and wiring peripherals to fit within the chassis.
+                </p>               
+                <div class="project-images">
+                    <img src="images/PAFT_Elec.JPEG" class="project-image">
+                    <img src="images/PAFT_Screen.jpeg" class="project-image">
+                    <img src="images/PAFT_Buck.jpeg" class="project-image">
+                    <img src="images/PAFT_Bat.jpeg" class="project-image">
+                </div>
+
+                <h3>Technologies Used</h3>
+                <p>LiPo Batteries, Power Distribution/Conversion, RubikPi, Troubleshooting Equipment (DMMs, Oscilloscopes)</p>
+
+                <h3>Features</h3>
+                <ul>
+                    <li>Individually rotating arms using servo motors with linearly actuated shrug to enable walking</li>
+                    <li>LCD screen and speakers for interactivity</li>
+                    <li>IMU and camera for sensing</li>
                 </ul>
 
                 <div class="project-links">
